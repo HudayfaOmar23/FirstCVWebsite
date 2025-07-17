@@ -1,0 +1,661 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.roboto-condensed-uniquifier> {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 10px;
+  background-color: #000;
+  color: white;
+    
+
+  line-height: 1.6;
+}
+
+section{
+padding: 100px 200px;
+}
+
+/*the nav bars section, and how it  it looks*/
+header {
+  z-index: 999;
+  position: fixed;
+  background: rgba(0, 255, 157, 0);
+  border: rgb(0, 0, 0)fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease;
+  text-shadow:
+  0.07em 0 rgb(0, 0, 0),
+  0 0.07em rgb(0, 0, 0),
+  -0.07em 0 rgb(0, 0, 0),
+  0 -0.07em rgb(0, 0, 0);
+  color: #ffffff;
+}
+
+/*sticky header so that the nav bar changes when you scroll*/
+header.sticky {
+  background: rgb(0, 0, 0);
+  text-shadow:
+  0.07em 0 rgb(0, 0, 0),
+  0 0.07em rgb(0, 0, 0),
+  -0.07em 0 rgb(0, 0, 0),
+  0 -0.07em rgb(0, 0, 0);
+  padding: 10px 200px;
+}
+
+/*my name/logo on the top left is now white*/
+header .logo {
+  color: #00fff2;
+  text-shadow:
+  0.07em 0 rgb(0, 0, 0),
+  0 0.07em rgb(0, 0, 0),
+  -0.07em 0 rgb(0, 0, 0),
+  0 -0.07em rgb(0, 0, 0);
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navigation {
+  position: relative;
+}
+
+/*Words on the headers size and color white*/
+header .navigation a {
+  color: #ffffff;
+  text-shadow:
+  0.07em 0 rgb(0, 0, 0),
+  0 0.07em rgb(0, 0, 0),
+  -0.07em 0 rgb(0, 0, 0),
+  0 -0.07em rgb(0, 0, 0);
+  font-size: 2em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+/*hovering over the header words makes them change color*/
+header .navigation a:hover {
+  color: rgb(0, 255, 221);
+}
+
+/*changes colour of header while scrolling*/
+header.sticky .navigation a:hover {
+  color: #ffffff;
+}
+
+/*changes to the look of my home page and the background*/
+.home {
+  position: relative;
+  text-shadow:
+  0.07em 0 rgb(0, 0, 0),
+  0 0.07em rgb(0, 0, 0),
+  -0.07em 0 rgb(0, 0, 0),
+  0 -0.07em rgb(0, 0, 0);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(../images/killua.jpeg)no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/*adjusts the height of the body*/
+body {
+  min-height: 110vh;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*styling the titles of them
+different sections/pages of the website*/
+.section-title {
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  font-weight: 800;
+  margin-bottom: 60px;
+  font-size: 20px;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+/*line under the titles of the different pages */
+.section-title:before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  width: 200px;
+  height: 5px;
+  background: rgb(0, 0, 0);
+  transform: translateX(-50%);
+}
+
+/* styling the content of the homepage text and all */
+.home .info {
+  max-width: 800px;
+  font-size: 20px;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+/*made the front text Light blue for my name part*/
+.home .info h2 {
+  color: rgb(0, 255, 234);
+  font-size: 2em;
+  font-weight: 500;
+}
+
+/*size of the main text altered*/
+.home .info h2 span {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+/*the stylings for my second section which is my work background*/
+.work {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(../images/Sunset.jpg)no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/*made it so the page fills more of the screen*/
+.work .info {
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  
+}
+
+/* moves the text and info of the work page more to the right side*/
+.work .info .column-left {
+  position: relative;
+  width: 45%;
+}
+
+/*text moves away from the profile image*/
+.work .info .column-right {
+  position: relative;
+  width: 50%;
+}
+
+/*Changing the amount of space thats taken so that it takes a bit more space*/
+.work .info .column-left .img-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 95%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/*changing the minumum height of the image*/
+.work .info .column-left .img-card {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  
+}
+
+/*changing the font sizes of the work
+page info*/
+
+.work .info .block-text{
+  font-size: 2em;
+  text-shadow:
+      0.07em 0 rgb(0, 0, 0),
+      0 0.07em rgb(0, 0, 0),
+      -0.07em 0 rgb(0, 0, 0),
+      0 -0.07em rgb(0, 0, 0);
+}
+
+.work .info .column-right .info-title {
+  font-size: 4em;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-shadow:
+      0.07em 0 rgb(0, 0, 0),
+      0 0.07em rgb(0, 0, 0),
+      -0.07em 0 rgb(0, 0, 0),
+      0 -0.07em rgb(0, 0, 0);
+}
+
+/*STYLING FOR THE FOOTER*/
+
+/*made the footer box purple to match the theme and made the text 
+white so its clearer to read*/
+
+.footer {
+  background: rgb(255, 254, 254);
+  color: #000000;
+  text-align: center;
+  padding: 2em;
+}
+
+/*making the title of the footer stick out more*/
+.footer .footer-title {
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+/*changed the sizes of the footers text*/
+.footer p {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+/*STYLING FOR Education PAGE*/
+
+.education{
+  color: white;
+  font-size: 20px;
+  text-shadow:
+      0.07em 0 rgb(0, 0, 0),
+      0 0.07em rgb(0, 0, 0),
+      -0.07em 0 rgb(0, 0, 0),
+      0 -0.07em rgb(0, 0, 0);
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(../images/gojo.jpg)no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.education .block-education{
+  font-size: 10vh;
+  
+}
+
+/*makes the text to the side rather than
+under the skills paragraph. text is white */
+
+.education .info {
+  height: 150vh;
+  position: relative;
+  display: flex;
+  color: #ffffff;
+  margin-top: 20px;
+  width: 100%;
+
+}
+
+/*sorting the layout spaces between the text of the skills page*/
+
+.education .info .column-left{
+  position: relative;
+  width: 46%;
+  
+}
+
+/*width of the bar*/
+.education .info .column-right{
+  position: relative;
+  width: 46%;
+}
+
+/*space between the sub heading the paragraph*/
+.education .info .column-left .info-title{
+  margin-bottom: 20px;
+  font-size: 3em;
+  color: rgb(255, 255, 255);
+}
+
+.education .info .column-right .bar{
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.education .info .column-right .bar .info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+/*styling for the skills bars under the education section*/
+
+.education .info .column-right .bar .skills span{
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.education .info .column-right .bar .line{
+  position: relative;
+  width: 100%;
+  height: 15px;
+  background: rgb(255, 255, 255);
+  border-radius: 2px;
+}
+
+.education .info .column-right .bar .line:before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+}
+
+.education .info .column-right .bar .criticalthinking:before{
+  width: 75%;
+  background: rgb(195, 0, 255);
+}
+
+.education .info .column-right .bar .timemanagement:before{
+  width: 70%;
+  background: rgb(162, 0, 255);
+}
+
+.education .info .column-right .bar .qualityofwork:before{
+  width: 65%;
+  background: rgb(225, 0, 255);
+}
+
+.education .info .column-right .bar .teamworking:before{
+  width: 80%;
+  background: rgb(234, 1, 255);
+}
+
+/*STYLING THE CONTACT SECTION*/
+
+/*background colour is Purple*/
+.contactme{
+  background-color: rgb(0, 225, 255);
+}
+
+
+
+/*styling the contact me form*/
+.contactme-form{
+  background: rgb(255, 255, 255);
+  max-width: 500px;
+  margin: auto;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.contactme-form h3{
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contactme-form .input-box{
+  position: center;
+  
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.contactme-form .input-box textarea{
+  width: 100%;
+  padding: 10px;
+  font-size: 2em;
+}
+
+.contactme-form .input-box input{
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.contactme-info{
+  position: relative;
+  color: #00d0df;
+  text-shadow:
+  0.07em 0 rgb(0, 0, 0),
+  0 0.07em rgb(0, 0, 0),
+  -0.07em 0 rgb(0, 0, 0),
+  0 -0.07em rgb(0, 0, 0);
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  align-items: center;
+  background: url(../images/killua-contact.png)no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 10px 10;
+	padding: 20px 70px;
+}
+.contactme-info h1 {
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	text-align: center;
+	color: #03b4d3;
+}
+
+.contactme-info h2 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-top: 50px;
+}
+
+.contactme-info p {
+  color: #fcfcfd;
+  text-shadow: #000000;
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+.contact .map {
+	margin-top: 40px;
+	height: 300px;
+}
+.contact .map {
+	width: 100%;
+	height: 300px;
+}
+.contact .map {
+  margin-top: 40px;
+}
+
+.contactme .contactme-info {
+	margin-bottom: 40px;
+  
+	background-color: #252324;
+	border-radius: 120px;
+	margin: 25px;
+}
+
+/*styling for the send button for contact me*/
+.contactme-form .input-box .send-btn{
+  color: rgb(0, 0, 0);
+  background: rgb(4, 247, 255);
+  display: inline-block;
+  position: center;
+  font-size: 2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.contactme-form .input-box .send-btn:hover{
+  background: rgb(250, 250, 250);
+  color: crimson;
+}
+
+
+/* STYLING FOR DIFFERENT SCREENS*/
+@media (max-width: 1030px){
+  header{
+    padding: 12px 20px;
+  }
+
+/*when the webpage is shrinked navbar information dissapears*/
+  header.sticky{
+   padding: 10px 20px;
+ }
+
+ header .navigation{
+   display: none;
+ }
+
+/*styling for the horizontal navbar*/
+ header .navigation.active{
+    z-index: 888;
+    position: fixed;
+    background: rgb(0, 238, 255);
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgb(0, 0, 0), 25555;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn{
+    position: absolute;
+    background: url(/images/open.png)no-repeat;
+    background-size: 60px;
+    background-position: center;
+    background-color: #00ffffa9;
+    border-radius: 10%;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.3 ease;
+  }
+
+/*styling the text of the navbar*/
+  header .navigation a{
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    margin: 10px;
+    padding: 0 20px;
+    border-radius: 20px;
+  }
+
+  /*styling the navbar when user hovers over it*/
+  header .navigation a:hover{
+   background: rgb(3, 238, 255);
+   color: rgb(0, 0, 0)0, 0;
+   transition: 0.3s ease;
+ }
+
+ /*added a close button*/
+ .menu-btn.active{
+    z-index: 999;
+    background: url(/images/close.png)no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+    filter: invert(1);
+  }
+
+  section{
+    padding: 80px 20px;
+  }
+
+  .home .info h2{
+    font-size: 1em;
+  }
+
+
+  .section-title{
+    font-size: 35px;
+  }
+
+  .work .info{
+    flex-direction: column;
+  }
+
+  .work .info .column{
+    position: relative;
+    width: 100%;
+  }
+
+  .work .info .column-right{
+    margin-top: 40px;
+  }
+
+  .education .info{
+    flex-direction: column;
+  }
+
+  .education .info .column{
+    position: relative;
+    width: 100%;
+  }
+
+  .education .info .column-right{
+    margin-top: 40px;
+  }
+.contactme-form{
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+  .contactme-form{
+    padding: 35px 40px;
+  }
+  .contactme{
+		padding-top: 125px
+	}
+  .contactme{
+    padding: 35px 40px;
+  }
+}
+
